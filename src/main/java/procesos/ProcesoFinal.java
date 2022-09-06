@@ -28,7 +28,7 @@ public class ProcesoFinal extends ProcesoExtremo {
                 .reduce("", String::concat);
     }
 
-    public void consumirMensaje(){
+    private void consumirMensaje(){
         while (!BUZON_ENTRADA.hayMensajes()){
             Thread.yield();
         }

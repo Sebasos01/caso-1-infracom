@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class Utiles {
 
-    private static int checkSum(List<String> mensajes){
+    private static int codigoHash(List<String> mensajes){
         List<Integer> temp = new ArrayList<>();
         Pattern pattern = Pattern.compile("^M(\\d+)");
         Matcher matcher = pattern.matcher("");
@@ -23,7 +23,7 @@ public class Utiles {
     }
 
     public static boolean checkSum(List<String> mensajes1, List<String> mensajes2){
-        return checkSum(mensajes1) == checkSum(mensajes2);
+        return codigoHash(mensajes1) == codigoHash(mensajes2);
     }
 
 }

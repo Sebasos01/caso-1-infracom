@@ -33,7 +33,7 @@ public class ProcesoInicial extends ProcesoExtremo{
         System.out.println("Proceso inicial terminado");
     }
 
-    public void enviarMensaje(String mensaje){
+    private void enviarMensaje(String mensaje){
         while (true){
             while (!BUZON_SALIDA.hayDisponibilidad()){
                 Thread.yield();
@@ -48,7 +48,7 @@ public class ProcesoInicial extends ProcesoExtremo{
         }
     }
 
-    public void enviarMensajeFin(){
+    private void enviarMensajeFin(){
         while (true) {
             while (!BUZON_SALIDA.hayDisponibilidad()){
                 Thread.yield();
